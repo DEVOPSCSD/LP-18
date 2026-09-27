@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "2c22a0b6-b892-4b37-b8b2-33b390759b72",
+      "username": "akshitha",
+      "email": "abc@gmail.com",
+      "passwordHash": "$2a$10$xsxF9MdhWnJtWgSLa/v44.o2qmfgknGCeMcyCv9uTtYdZ6Ct6TIWS"
+    },
+    {
+      "id": "c82fab08-5969-4d23-85be-0bd2627674f3",
+      "username": "Pravalika",
+      "email": "pravalikayada@gmail.com",
+      "passwordHash": "$2a$10$4OOWJvbNmCTpnL7w6zgKIuqSfAyQcQOyTn2wMK5uza6MfQ34i5JF2"
+    }
+  ],
+  "contacts": [
+    {
+      "userA": "akshitha",
+      "userB": "Pravalika"
+    }
+  ],
+  "groups": [],
+  "messages": [
+    {
+      "id": "47972f77-e8ce-448b-a3bb-d9c616bbc519",
+      "type": "private",
+      "from": "akshitha",
+      "to": "Pravalika",
+      "text": "hi",
+      "ts": 1790429213214
+    },
+    {
+      "id": "de8e2293-eb10-4de2-9769-6320140beb6f",
+      "type": "private",
+      "from": "Pravalika",
+      "to": "akshitha",
+      "text": "Hloo",
+      "ts": 1790429530469
+    },
+    {
+      "id": "5499f697-982d-43ad-a470-48e6eb7e8280",
+      "type": "private",
+      "from": "Pravalika",
+      "to": "akshitha",
+      "text": "How is your day",
+      "ts": 1790429566272
+    },
+    {
+      "id": "9b7c7882-76f5-4708-809c-1f43482c9b9c",
+      "type": "private",
+      "from": "akshitha",
+      "to": "Pravalika",
+      "fileUrl": "/uploads/1790429645023-2049972b.pdf",
+      "fileName": "Y.Akshithaa(24P61A67I7).pdf",
+      "ts": 1790429645033
+    }
+  ]
+}
