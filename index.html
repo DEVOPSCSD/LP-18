@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intranet Chat</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ===================== REGISTER ===================== -->
+<section id="view-register" class="auth-view">
+  <div class="auth-card">
+    <h1>Register</h1>
+    <label>Username</label>
+    <input type="text" id="reg-username" placeholder="Choose a username" />
+    <label>Email</label>
+    <input type="email" id="reg-email" placeholder="you@example.com" />
+    <label>Password</label>
+    <input type="password" id="reg-password" placeholder="Choose a password" />
+    <button class="btn-primary" id="btn-register">Register</button>
+    <p class="switch-link">Already have an account? <a href="#" id="link-to-login">Login here</a></p>
+    <p class="error" id="reg-error"></p>
+  </div>
+</section>
+
+<!-- ===================== LOGIN ===================== -->
+<section id="view-login" class="auth-view hidden">
+  <div class="auth-card">
+    <h1>Login</h1>
+    <label>Username or Email</label>
+    <input type="text" id="login-username" placeholder="Username or Email" />
+    <label>Password</label>
+    <input type="password" id="login-password" placeholder="Password" />
+    <button class="btn-primary" id="btn-login">Login</button>
+    <p class="switch-link">Don't have an account? <a href="#" id="link-to-register">Register here</a></p>
+    <p class="error" id="login-error"></p>
+  </div>
+</section>
+
+<!-- ===================== DASHBOARD ===================== -->
+<section id="view-dashboard" class="dashboard hidden">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span id="me-username">username</span>
+      <span class="header-icons">
+        <a href="#" id="link-profile" title="Profile">&#9881;</a>
+        <a href="#" id="link-logout" title="Logout">&#9211;</a>
+      </span>
+    </div>
+
+    <div class="add-row">
+      <input type="text" id="add-contact-input" placeholder="Add contact..." />
+      <button id="btn-add-contact">+</button>
+    </div>
+    <div class="add-row">
+      <input type="text" id="new-group-input" placeholder="New group..." />
+      <button id="btn-new-group">+</button>
+    </div>
+
+    <div class="lists">
+      <div class="list-col">
+        <h3>CONTACTS</h3>
+        <ul id="contacts-list"></ul>
+      </div>
+      <div class="list-col">
+        <h3>GROUPS</h3>
+        <ul id="groups-list"></ul>
+      </div>
+    </div>
+  </aside>
+
+  <main class="chat-area">
+    <div class="chat-header" id="chat-header">
+      <span id="chat-title">Select a contact or group to start chatting</span>
+      <div class="group-add-member hidden" id="group-add-member">
+        <input type="text" id="group-member-input" placeholder="Username" />
+        <button id="btn-add-member">Add</button>
+      </div>
+    </div>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="composer hidden" id="composer">
+      <label class="attach-btn" for="file-input" title="Attach file">&#128206;</label>
+      <input type="file" id="file-input" hidden />
+      <input type="text" id="message-input" placeholder="Type a message" />
+      <button id="btn-send">&#10148;</button>
+    </div>
+  </main>
+</section>
+
+<!-- ===================== PROFILE ===================== -->
+<section id="view-profile" class="auth-view hidden">
+  <div class="auth-card">
+    <h1>Update Profile</h1>
+    <label>New Email</label>
+    <input type="email" id="profile-email" placeholder="you@example.com" />
+    <label>New Password (leave blank to keep current)</label>
+    <input type="password" id="profile-password" placeholder="••••••••" />
+    <button class="btn-primary" id="btn-update-profile">Update Profile</button>
+    <div class="profile-links">
+      <a href="#" id="link-back-dashboard">Back to Dashboard</a>
+      <a href="#" id="link-logout-2" class="logout-link">Logout</a>
+    </div>
+    <p class="error" id="profile-error"></p>
+    <p class="success" id="profile-success"></p>
+  </div>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
